@@ -1,9 +1,54 @@
 @import 'styles/variables.scss';
-
+@import 'styles/main.scss';
 .app {
   margin: 80px auto $base-margin auto;
   padding: 0 2 * $base-padding 2 * $base-padding 2 * $base-padding;
-
   width: 960px;
   background-color: $white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  margin-top: -$image-size / 2;
+  border-radius: 50%;
+  width: $image-size;
+  height: $image-size;
+}
+
+.br {
+  height: 3px;
+  width: 100%;
+  background-color: $gray;
+}
+
+.timeline-entry {
+  width: calc(100% - 2 * $base-margin);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: $base-margin;
+  box-sizing: border-box;
+
+  .year {
+    width: 100px;
+    h4 {
+      margin-top: 0;
+    }
+  }
+  .detail {
+    flex-grow: 1;
+    background-color: $gray;
+    padding: $base-padding;
+    h4 {
+      margin-top: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
 }
